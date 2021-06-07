@@ -1,0 +1,4 @@
+src/**/*.class
+*.zip
+derby.log
+

@@ -3,8 +3,7 @@ WPRDFS := ${shell cat pathways.txt | sed -e 's/\(.*\)/wp\/Human\/\1.ttl/' }
 GPMLRDFS := ${shell cat pathways.txt | sed -e 's/\(.*\)/wp\/gpml\/Human\/\1.ttl/' }
 REPORTS := ${shell cat pathways.txt | sed -e 's/\(.*\)/reports\/\1.md/' }
 
-all: wikipathways-SARS-CoV-2-rdf-authors.zip wikipathways-SARS-CoV-2-rdf-wp.zip \
-     wikipathways-SARS-CoV-2-rdf-gpml.zip
+all: wikipathways-rdf-wp.zip wikipathways-rdf-gpml.zip
 
 fetch:clean ${GPMLS}
 
@@ -15,17 +14,13 @@ gpml/%.gpml:
 	@echo "Git fetching $@ ..."
 	@echo '$@' | sed -e 's/gpml\/\(.*\)\.gpml/\1/' | xargs bash getPathway.sh
 
-wikipathways-SARS-CoV-2-rdf-authors.zip: authors/*
-	@rm -f wikipathways-SARS-CoV-2-rdf-authors.zip
-	@zip wikipathways-SARS-CoV-2-rdf-authors.zip authors/*
+wikipathways-rdf-wp.zip: ${WPRDFS}
+	@rm -f wikipathways-rdf-wp.zip
+	@zip wikipathways-rdf-wp.zip wp/Human/*
 
-wikipathways-SARS-CoV-2-rdf-wp.zip: ${WPRDFS}
-	@rm -f wikipathways-SARS-CoV-2-rdf-wp.zip
-	@zip wikipathways-SARS-CoV-2-rdf-wp.zip wp/Human/*
-
-wikipathways-SARS-CoV-2-rdf-gpml.zip: ${GPMLRDFS}
-	@rm -f wikipathways-SARS-CoV-2-rdf-gpml.zip
-	@zip wikipathways-SARS-CoV-2-rdf-gpml.zip wp/gpml/Human/*
+wikipathways-rdf-gpml.zip: ${GPMLRDFS}
+	@rm -f wikipathways-rdf-gpml.zip
+	@zip wikipathways-rdf-gpml.zip wp/gpml/Human/*
 
 wp/Human/%.ttl: gpml/%.gpml src/java/main/org/wikipathways/covid/CreateRDF.class
 	@mkdir -p wp/Human

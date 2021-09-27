@@ -44,13 +44,13 @@ make
 Make sure that the GPML and the `.rev` files are under version control to track
 the history of the pathway.
 
-### Step 5: Run the validation tests
+## Step 5: Run the validation tests
 
 ```
 make check
 ```
 
-### Step 6: (optional) Publish everything online
+## Step 6: (optional) Publish everything online
 
 For this, enable GitHub Pages and add the files in `reports/` to the revision
 control, including the `index.md` in the root folder.

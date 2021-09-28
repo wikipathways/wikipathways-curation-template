@@ -72,3 +72,4 @@ index.md:
 
 update:
 	@wget -O Makefile https://raw.githubusercontent.com/wikipathways/wikipathways-curation-template/main/Makefile
+	@wget -O src/java/main/org/wikipathways/covid/CheckRDF.java https://raw.githubusercontent.com/wikipathways/wikipathways-curation-template/main/src/java/main/org/wikipathways/covid/CheckRDF.java

@@ -3,7 +3,7 @@
 Template repository to set up pathway curation for the subset of WikiPathways, as
 specified in the `pathways.txt` file.
 
-## Step 0. Requirements
+## Step 1. Requirements
 
 You need the following programs and experience with a `Makefile`:
 
@@ -14,7 +14,7 @@ You need the following programs and experience with a `Makefile`:
 * javac
 * bash
 
-## Step 1: Update the GPML files
+## Step 2: Update the GPML files
 
 First, make sure the `pathways.txt` files is updated to list the pathways you want
 to curate.

@@ -14,6 +14,13 @@ You need the following programs and experience with a `Makefile`:
 * javac
 * bash
 
+You also need three Java archives in the `libs/` folder that you can download
+(and update) with:
+
+```
+make install
+```
+
 ## Step 2: Update the GPML files
 
 First, make sure the `pathways.txt` files is updated to list the pathways you want

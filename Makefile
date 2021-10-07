@@ -5,7 +5,7 @@ REPORTS := ${shell cat pathways.txt | sed -e 's/\(.*\)/reports\/\1.md/' }
 SBMLS := ${shell cat pathways.txt | sed -e 's/\(.*\)/sbml\/\1.sbml/' } ${shell cat pathways.txt | sed -e 's/\(.*\)/sbml\/\1.txt/' }
 SVGS := ${shell cat pathways.txt | sed -e 's/\(.*\)/sbml\/\1.svg/' }
 
-FRAMEWORKVERSION=release-0
+FRAMEWORKVERSION=release-1
 
 all: wikipathways-rdf-wp.zip wikipathways-rdf-gpml.zip
 

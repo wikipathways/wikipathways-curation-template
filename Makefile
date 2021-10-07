@@ -22,6 +22,7 @@ fetch:clean ${GPMLS}
 
 clean:
 	@rm -f ${GPMLS}
+	@rm libs/*.jar
 
 gpml/%.gpml:
 	@echo "Git fetching $@ ..."

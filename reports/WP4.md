@@ -8,47 +8,22 @@
 * SBML file: [sbml/WP4.sbml](../sbml/WP4.sbml) ([SVG](../sbml/WP4.svg)) ([conversion notes](../sbml/WP4.txt))
 
 ## Tests
-* GeneralTests
-    * titlesShortEnough: .. all OK!
-    * weirdCharacterTitles: .. all OK!
-    * duplicateTitles: .. all OK!
-    * noTags: .. all OK!
-    * nullDataSources: .. all OK!
-    * undefinedDataSources: .. all OK!
-    * undefinedIdentifier: .x we found 1 problem(s):
-        * [Data nodes with an 'undefined' identifier: 1](#fadcb642)
-    * dataNodeWithoutGraphId: .. all OK!
-    * groupsHaveDetail: .. all OK!
-    * emptyLabelOfNodeWithIdentifier: .. all OK!
+* CASMetabolitesTests: all 2 tests OK!
+* ChEBIMetabolitesTests: all 4 tests OK!
+* ChemSpiderTests: all 2 tests OK!
+* CovidDiseaseMapsTests
+    * interactionsWithoutReferences: .x we found 1 problem(s):
+        * [Interactions without literature references: 4](#2e295932)
+    * missingHGNC: .. all OK!
 * DataNodesTests
     * dataNodesWithoutIdentifier: .x we found 1 problem(s):
         * [The following DataNodes have no identifier: 3](#d2d32fa2)
     * unknownTypes_knownDatasource: .. all OK!
     * unknownTypes: .. all OK!
     * unknownTypes_Reactome: .. all OK!
-* PathwayTests
-    * deletedPathways: .. all OK!
-    * linksToDeletedPathways: .. all OK!
-    * speciesMismatch: .. all OK!
-    * testRoundedRectangle: .x we found 1 problem(s):
-        * [Pathways DataNodes with WikiPathways ID that can be converted to have a RoundedRectangle StyleType so that they become clickable: 1](#9fbad3cb)
-    * youMustCite: .. all OK!
-* ReferencesTests: all 3 tests OK!
-* WikidataTests: all 8 tests OK!
-* OudatedDataSourcesTests: all 5 tests OK!
-* CovidDiseaseMapsTests
-    * interactionsWithoutReferences: .x we found 1 problem(s):
-        * [Interactions without literature references: 4](#2e295932)
-    * missingHGNC: .. all OK!
 * GeneTests: all 3 tests OK!
-* EnsemblTests: all 4 tests OK!
-* ProteinsTests: all 2 tests OK!
-* UniProtTests: all 4 tests OK!
-* CASMetabolitesTests: all 2 tests OK!
-* ChEBIMetabolitesTests: all 4 tests OK!
-* ChemSpiderTests: all 2 tests OK!
-* HMDBMetabolitesTests: all 1 tests OK!
 * HMDBSecMetabolitesTests: all 3 tests OK!
+* InteractionTests: all 7 tests OK!
 * KEGGMetaboliteTests: all 2 tests OK!
 * LIPIDMAPSTests: all 1 tests OK!
 * MetabolitesTests
@@ -68,8 +43,33 @@
     * PubChemIDsNotNumbers: .. all OK!
     * PubChemSubstanceIDsNotNumbers: .. all OK!
 * MetaboliteStructureTests: all 2 tests OK!
+* PathwayTests
+    * deletedPathways: .. all OK!
+    * linksToDeletedPathways: .. all OK!
+    * speciesMismatch: .. all OK!
+    * testRoundedRectangle: .x we found 1 problem(s):
+        * [Pathways DataNodes with WikiPathways ID that can be converted to have a RoundedRectangle StyleType so that they become clickable: 1](#9fbad3cb)
+    * youMustCite: .. all OK!
+* ProteinsTests: all 2 tests OK!
 * PubChemMetabolitesTests: all 3 tests OK!
-* InteractionTests: all 7 tests OK!
+* ReferencesTests: all 3 tests OK!
+* UniProtTests: all 4 tests OK!
+* EnsemblTests: all 4 tests OK!
+* GeneralTests
+    * titlesShortEnough: .. all OK!
+    * weirdCharacterTitles: .. all OK!
+    * duplicateTitles: .. all OK!
+    * noTags: .. all OK!
+    * nullDataSources: .. all OK!
+    * undefinedDataSources: .. all OK!
+    * undefinedIdentifier: .x we found 1 problem(s):
+        * [Data nodes with an 'undefined' identifier: 1](#fadcb642)
+    * dataNodeWithoutGraphId: .. all OK!
+    * groupsHaveDetail: .. all OK!
+    * emptyLabelOfNodeWithIdentifier: .. all OK!
+* HMDBMetabolitesTests: all 1 tests OK!
+* OudatedDataSourcesTests: all 5 tests OK!
+* WikidataTests: all 8 tests OK!
 
 
 ## Summary
@@ -80,37 +80,6 @@
 * Number of fails: 5
 
 ## Fails
-
-<a name="fadcb642" />
-
-## GeneralTests.undefinedIdentifier
-
-Data nodes with an 'undefined' identifier: 1
-```
-[["mb","homepage","label"],
-["http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/DataNode/a489f","http://www.wikipathways.org/instance/WP4.gp_r119193","Substrate é"]
-]
-```
-
-<a name="d2d32fa2" />
-
-## DataNodesTests.dataNodesWithoutIdentifier
-
-The following DataNodes have no identifier: 3
-```
-http://www.wikipathways.org/instance/WP4.gp_r119193 http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/DataNode/d6c00 (ATP)
-http://www.wikipathways.org/instance/WP4.gp_r119193 http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/DataNode/f9e19 (Alpha-D-Glucose)
-http://www.wikipathways.org/instance/WP4.gp_r119193 http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/DataNode/da9a8 (D-Glucose)
-```
-
-<a name="9fbad3cb" />
-
-## PathwayTests.testRoundedRectangle
-
-Pathways DataNodes with WikiPathways ID that can be converted to have a RoundedRectangle StyleType so that they become clickable: 1
-```
-http://www.wikipathways.org/instance/WP4.gp_r119193 -> d8bae, WP78
- ```
 
 <a name="2e295932" />
 
@@ -126,6 +95,17 @@ http://www.wikipathways.org/instance/WP4.gp_r119193 -> http://rdf.wikipathways.o
 
 More details at [https://wikipathways.github.io/WikiPathwaysCurator/CovidDiseaseMapsTests/interactionsWithoutReferences](https://wikipathways.github.io/WikiPathwaysCurator/CovidDiseaseMapsTests/interactionsWithoutReferences)
 
+<a name="d2d32fa2" />
+
+## DataNodesTests.dataNodesWithoutIdentifier
+
+The following DataNodes have no identifier: 3
+```
+http://www.wikipathways.org/instance/WP4.gp_r119193 http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/DataNode/d6c00 (ATP)
+http://www.wikipathways.org/instance/WP4.gp_r119193 http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/DataNode/f9e19 (Alpha-D-Glucose)
+http://www.wikipathways.org/instance/WP4.gp_r119193 http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/DataNode/da9a8 (D-Glucose)
+```
+
 <a name="c300c046" />
 
 ## MetabolitesTests.metabolitesWithAnEnsembleID
@@ -136,6 +116,26 @@ Unexpected metabolites with an Ensemble identifier: 3
 ["https://identifiers.org/ensembl/undefined","Substrate é","undefined","http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/Complex/aa28d"],
 ["https://identifiers.org/ensembl/undefined","Substrate é","undefined","http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/WP/Interaction/idd31b36db"],
 ["https://identifiers.org/ensembl/undefined","Substrate é","undefined","https://identifiers.org/wikipathways/WP4.gp_r119193"]
+]
+```
+
+<a name="9fbad3cb" />
+
+## PathwayTests.testRoundedRectangle
+
+Pathways DataNodes with WikiPathways ID that can be converted to have a RoundedRectangle StyleType so that they become clickable: 1
+```
+http://www.wikipathways.org/instance/WP4.gp_r119193 -> d8bae, WP78
+ ```
+
+<a name="fadcb642" />
+
+## GeneralTests.undefinedIdentifier
+
+Data nodes with an 'undefined' identifier: 1
+```
+[["mb","homepage","label"],
+["http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/DataNode/a489f","http://www.wikipathways.org/instance/WP4.gp_r119193","Substrate é"]
 ]
 ```
 

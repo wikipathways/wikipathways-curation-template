@@ -14,7 +14,7 @@ You need the following programs and experience with a `Makefile`:
 * javac
 * bash
 
-You also need three Java archives in the `libs/` folder that you can download
+You also need four Java archives in the `libs/` folder that you can download
 (and update) with:
 
 ```
@@ -56,6 +56,11 @@ the history of the pathway.
 ```
 make check
 ```
+
+The `tests.txt` file contains the list of tests that are run. By default it runs
+all tests, identified with the `all` methods, from the generic tests and community-specific
+tests are commented out (by starting the line with an `#`). By commenting out the
+the `all` lines, you can uncomment specific tests in that class.
 
 ## Step 6: (optional) Publish everything online
 

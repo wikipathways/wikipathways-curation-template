@@ -1,0 +1,49 @@
+GeneralTests.titlesShortEnough(helper)); // not all GeneralTests
+GeneralTests.weirdCharacterTitles(helper));
+GeneralTests.duplicateTitles(helper));
+GeneralTests.noTags(helper));
+GeneralTests.nullDataSources(helper));
+GeneralTests.undefinedDataSources(helper));
+GeneralTests.undefinedIdentifier(helper));
+GeneralTests.dataNodeWithoutGraphId(helper));
+GeneralTests.groupsHaveDetail(helper));
+GeneralTests.emptyLabelOfNodeWithIdentifier(helper));
+DataNodesTests.all(helper));
+PathwayTests.all(helper));
+ReferencesTests.all(helper));
+WikidataTests.keggWithoutMapping(helper)); // not all
+WikidataTests.pubchemCIDWithoutMapping(helper));
+WikidataTests.hmdbWithoutMapping(helper));
+WikidataTests.casWithoutMapping(helper));
+WikidataTests.wikDataTypo(helper));
+WikidataTests.duplicateWikidataMappings(helper));
+WikidataTests.wikidataIdentifiersWrong(helper));
+WikidataTests.chemspiderCIDWithoutMapping(helper));
+OutdatedDataSourcesTests.outdatedUniprot(helper));
+OutdatedDataSourcesTests.outdatedUniprot2(helper));
+OutdatedDataSourcesTests.outdatedUniprot3(helper));
+OutdatedDataSourcesTests.outdatedUniprot4(helper));
+OutdatedDataSourcesTests.oldUniprotSwissProt(helper));
+
+CovidDiseaseMapsTests.all(helper));
+
+GeneTests.all(helper));
+EnsemblTests.wrongEnsemblIDForHumanSpecies(helper)); // exclude outdatedIdentifiers (not all pathways have many genes)
+EnsemblTests.wrongEnsemblIDForRatSpecies(helper));
+EnsemblTests.wrongEnsemblIDForCowSpecies(helper));
+EnsemblTests.wrongEnsemblIDForMouseSpecies(helper));
+ProteinsTests.all(helper));
+UniProtTests.all(helper));
+
+CASMetabolitesTests.all(helper));
+ChEBIMetabolitesTests.all(helper));
+ChemSpiderTests.all(helper));
+HMDBMetabolitesTests.outdatedIdentifiers(helper)); // not all
+HMDBSecMetabolitesTests.all(helper));
+KEGGMetaboliteTests.all(helper));
+LIPIDMAPSTests.all(helper));
+MetabolitesTests.all(helper));
+MetaboliteStructureTests.all(helper));
+PubChemMetabolitesTests.all(helper));
+
+InteractionTests.all(helper));

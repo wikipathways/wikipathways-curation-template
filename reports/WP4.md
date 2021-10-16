@@ -1,9 +1,11 @@
+<img style="float: right; width: 200px" src="../logo.png" />
 # WikiPathways WP4
 
 * WikiPathways: [WP4](https://identifiers.org/wikipathways:WP4)
 * Scholia: [WP4](https://scholia.toolforge.org/wikipathways/WP4)
 * WPRDF file: [wp/Human/WP4.ttl](../wp/Human/WP4.ttl)
 * GPMLRDF file: [wp/gpml/Human/WP4.ttl](../wp/gpml/Human/WP4.ttl)
+* SBML file: [sbml/WP4.sbml](../sbml/WP4.sbml) ([SVG](../sbml/WP4.svg)) ([conversion notes](../sbml/WP4.txt))
 
 ## Tests
 * GeneralTests: all 10 tests OK!

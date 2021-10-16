@@ -29,6 +29,7 @@ public class CheckRDF {
         String wpid     = wpFile.substring(9,wpFile.indexOf(".ttl"));
 
         PrintWriter report = new PrintWriter(reportFile);
+        PrintWriter reportStatus = new PrintWriter(reportFile.replace(".md",".txt"));
 
         report.println("<img style=\"float: right; width: 200px\" src=\"../logo.png\" />");
 
@@ -209,8 +210,10 @@ public class CheckRDF {
         }
         if (currentTestClassHasFails) {
           report.println(currentTestClassMessages + message);
+          reportStatus.println("status=✓");
         } else {
           report.println(": all " + testClassTests + " tests OK!");
+          reportStatus.println("status=⨯");
         }
 
         report.println();
@@ -232,8 +235,8 @@ public class CheckRDF {
                 }
             }
         }
-        report.flush();
-        report.close();
+        report.flush(); report.close();
+        reportStatus.flush(); reportStatus.close();
     }
 
 }

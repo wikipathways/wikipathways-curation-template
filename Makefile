@@ -73,10 +73,11 @@ reports/%.md: wp/Human/%.ttl wp/gpml/Human/%.ttl src/java/main/org/wikipathways/
 	@java -cp libs/jena-arq-3.17.0.jar:src/java/main/:libs/wikipathways.curator-1-SNAPSHOT-jar-with-dependencies.jar org.wikipathways.covid.CheckRDF $< $@
 
 index.md:
-	@echo "<img style=\"float: right; width: 200px\" src=\"logo.png\" />\n" > index.md
+	@echo "<img style=\"float: right; width: 200px\" src=\"logo.png\" />" > index.md
 	@echo "# Validation Reports\n" >> index.md
 	@for report in $(REPORTS) ; do \
-		echo "* [$$report]($$report)" >> index.md ; \
+		echo -n "* [$$report]($$report) " >> index.md ; \
+		echo `echo "$$report" | sed -e 's/.md/.txt/' | xargs cut -d'=' -f2` >> index.md ; \
 	done
 
 update:

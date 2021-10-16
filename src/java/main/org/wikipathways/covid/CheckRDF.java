@@ -120,6 +120,7 @@ public class CheckRDF {
                   // only output results when there are fails
                   if (currentTestClassHasFails) {
                     report.println(currentTestClassMessages + message);
+                    anyTestClassHasFails = true;
                   } else {
                     report.println(": all " + testClassTests + " tests OK!");
                   }

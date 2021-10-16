@@ -104,6 +104,7 @@ public class CheckRDF {
         String currentTestClass = "";
         String currentTest = "";
         boolean currentTestClassHasFails = false;
+        boolean anyTestClassHasFails = false;
         String currentTestClassMessages = "";
         String message = "";
         String errors = "";
@@ -210,10 +211,9 @@ public class CheckRDF {
         }
         if (currentTestClassHasFails) {
           report.println(currentTestClassMessages + message);
-          reportStatus.println("status=⨯");
+          anyTestClassHasFails = true;
         } else {
           report.println(": all " + testClassTests + " tests OK!");
-          reportStatus.println("status=✓");
         }
 
         report.println();
@@ -235,6 +235,12 @@ public class CheckRDF {
                 }
             }
         }
+        if (anyTestClassHasFails) {
+          reportStatus.println("status=⨯");
+        } else {
+          reportStatus.println("status=✓");
+        }
+
         report.flush(); report.close();
         reportStatus.flush(); reportStatus.close();
     }

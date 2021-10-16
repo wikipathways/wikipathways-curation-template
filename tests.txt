@@ -1,4 +1,4 @@
-BridgeDbMappingsTests.all
+#BridgeDbMappingsTests.all
 #BridgeDbMappingsTests.hasSomeEntrezGeneMappings
 #BridgeDbMappingsTests.hasSomeHMDBMappings
 #BridgeDbMappingsTests.hasSomeChemSpiderMappings

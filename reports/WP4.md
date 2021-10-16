@@ -21,7 +21,24 @@
     * unknownTypes_knownDatasource: .. all OK!
     * unknownTypes: .. all OK!
     * unknownTypes_Reactome: .. all OK!
+* EnsemblTests: all 5 tests OK!
+* GeneralTests
+    * titlesShortEnough: .. all OK!
+    * weirdCharacterTitles: .. all OK!
+    * duplicateTitles: .. all OK!
+    * curationAndHypothetical: .. all OK!
+    * curationAndNeedsWork: .. all OK!
+    * curationAndReactome: .. all OK!
+    * noTags: .. all OK!
+    * nullDataSources: .. all OK!
+    * undefinedDataSources: .. all OK!
+    * undefinedIdentifier: .x we found 1 problem(s):
+        * [Data nodes with an 'undefined' identifier: 1](#fadcb642)
+    * emptyLabelOfNodeWithIdentifier: .. all OK!
+    * dataNodeWithoutGraphId: .. all OK!
+    * groupsHaveDetail: .. all OK!
 * GeneTests: all 3 tests OK!
+* HMDBMetabolitesTests: all 2 tests OK!
 * HMDBSecMetabolitesTests: all 3 tests OK!
 * InteractionTests: all 7 tests OK!
 * KEGGMetaboliteTests: all 2 tests OK!
@@ -43,6 +60,7 @@
     * PubChemIDsNotNumbers: .. all OK!
     * PubChemSubstanceIDsNotNumbers: .. all OK!
 * MetaboliteStructureTests: all 2 tests OK!
+* OudatedDataSourcesTests: all 7 tests OK!
 * PathwayTests
     * deletedPathways: .. all OK!
     * linksToDeletedPathways: .. all OK!
@@ -54,29 +72,14 @@
 * PubChemMetabolitesTests: all 3 tests OK!
 * ReferencesTests: all 3 tests OK!
 * UniProtTests: all 4 tests OK!
-* EnsemblTests: all 4 tests OK!
-* GeneralTests
-    * titlesShortEnough: .. all OK!
-    * weirdCharacterTitles: .. all OK!
-    * duplicateTitles: .. all OK!
-    * noTags: .. all OK!
-    * nullDataSources: .. all OK!
-    * undefinedDataSources: .. all OK!
-    * undefinedIdentifier: .x we found 1 problem(s):
-        * [Data nodes with an 'undefined' identifier: 1](#fadcb642)
-    * dataNodeWithoutGraphId: .. all OK!
-    * groupsHaveDetail: .. all OK!
-    * emptyLabelOfNodeWithIdentifier: .. all OK!
-* HMDBMetabolitesTests: all 1 tests OK!
-* OudatedDataSourcesTests: all 5 tests OK!
-* WikidataTests: all 8 tests OK!
+* WikidataTests: all 14 tests OK!
 
 
 ## Summary
 
 * Number of test classes: 22
-* Number of tests: 91
-* Number of assertions: 182
+* Number of tests: 104
+* Number of assertions: 210
 * Number of fails: 5
 
 ## Fails
@@ -106,6 +109,17 @@ http://www.wikipathways.org/instance/WP4.gp_r119193 http://rdf.wikipathways.org/
 http://www.wikipathways.org/instance/WP4.gp_r119193 http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/DataNode/da9a8 (D-Glucose)
 ```
 
+<a name="fadcb642" />
+
+## GeneralTests.undefinedIdentifier
+
+Data nodes with an 'undefined' identifier: 1
+```
+[["mb","homepage","label"],
+["http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/DataNode/a489f","http://www.wikipathways.org/instance/WP4.gp_r119193","Substrate é"]
+]
+```
+
 <a name="c300c046" />
 
 ## MetabolitesTests.metabolitesWithAnEnsembleID
@@ -127,15 +141,4 @@ Pathways DataNodes with WikiPathways ID that can be converted to have a RoundedR
 ```
 http://www.wikipathways.org/instance/WP4.gp_r119193 -> d8bae, WP78
  ```
-
-<a name="fadcb642" />
-
-## GeneralTests.undefinedIdentifier
-
-Data nodes with an 'undefined' identifier: 1
-```
-[["mb","homepage","label"],
-["http://rdf.wikipathways.org/Pathway/WP4.gp_r119193/DataNode/a489f","http://www.wikipathways.org/instance/WP4.gp_r119193","Substrate é"]
-]
-```
 

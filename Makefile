@@ -7,6 +7,8 @@ SVGS := ${shell cat pathways.txt | sed -e 's/\(.*\)/sbml\/\1.svg/' }
 
 FRAMEWORKVERSION=release-1
 
+WEBSITE="https://new.wikipathways.org/SARS-CoV-2-WikiPathways/"
+
 all: wikipathways-rdf-wp.zip wikipathways-rdf-gpml.zip
 
 install:
@@ -78,7 +80,9 @@ index.md: ${REPORTS}
 	@echo "# Validation Reports\n" >> index.md
 	@for report in $(REPORTS) ; do \
 		echo -n "* [$$report]($$report) " >> index.md ; \
-		echo `echo "$$report" | sed -e 's/.md/.txt/' | xargs cut -d'=' -f2 | sed -e 's/✓/<span style="color:green">✓<\/span>/' | sed -e 's/⨯/<span style="color:red">⨯<\/span>/'` >> index.md ; \
+		echo -n "<img alt=\"pathway status\" src=\"https://img.shields.io/endpoint?url=${WEBSITE}reports/" >> index.md ; \
+		echo -n "`echo "$$report" | sed -e 's/.md//; s/reports\///'`" >> index.md ; \
+		echo ".json\">" >> index.md ; \
 	done
 
 update:

@@ -1,7 +1,9 @@
 # WikiPathways Curation Template
 
 Template repository to set up pathway curation for the subset of WikiPathways, as
-specified in the `pathways.txt` file.
+specified in the `pathways.txt` file. Second, update the `website.txt` file 
+(create if needed) to contain the link where the reports (particularly the JSON)
+files are published.
 
 ## Step 1. Requirements
 

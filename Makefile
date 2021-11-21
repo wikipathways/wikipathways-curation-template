@@ -7,7 +7,7 @@ SVGS := ${shell cat pathways.txt | sed -e 's/\(.*\)/sbml\/\1.svg/' }
 
 FRAMEWORKVERSION=release-1
 
-WEBSITE="https://new.wikipathways.org/SARS-CoV-2-WikiPathways/"
+WEBSITE := ${shell cat website.txt }
 
 all: wikipathways-rdf-wp.zip wikipathways-rdf-gpml.zip
 

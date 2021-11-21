@@ -21,10 +21,12 @@ sbml: ${SBMLS}
 
 svg: ${SVGS}
 
-fetch:clean ${GPMLS}
+fetch: clean ${GPMLS}
 
 clean:
 	@rm -f ${GPMLS}
+
+distclean: clean
 	@rm libs/*.jar
 
 gpml/%.gpml:

@@ -56,7 +56,7 @@ sbml/%.svg: sbml/%.sbml
 
 wp/Human/%.ttl: gpml/%.gpml src/java/main/org/wikipathways/covid/CreateRDF.class
 	@mkdir -p wp/Human
-	@cat "$<.rev" | xargs java -cp src/java/main/.:libs/GPML2RDF-3.0.0-SNAPSHOT-jar-with-dependencies.jar:libs/derby-10.14.2.0.jar:libs/slf4j-simple-1.7.32.jar org.wikipathways.covid.CreateRDF $< | grep -v ".bridge" | grep -v "^WARNING" | grep -v "^TODO" | grep -v "^Unknown and unsupported" > $@
+	@cat "$<.rev" | xargs java -cp src/java/main/.:libs/GPML2RDF-3.0.0-SNAPSHOT-jar-with-dependencies.jar:libs/derby-10.14.2.0.jar:libs/slf4j-simple-1.7.32.jar org.wikipathways.covid.CreateRDF $< | grep -v ".bridge" | grep -v "^WARNING" | grep -v "^TODO" | grep -v "^Unknown and unsupported" | grep -v "regulating line is reversible" > $@
 
 wp/gpml/Human/%.ttl: gpml/%.gpml src/java/main/org/wikipathways/covid/CreateGPMLRDF.class
 	@mkdir -p wp/gpml/Human

@@ -77,6 +77,7 @@ src/java/main/org/wikipathways/covid/CheckRDF.class: src/java/main/org/wikipathw
 check: ${REPORTS} index.md
 
 reports/%.md: wp/Human/%.ttl wp/gpml/Human/%.ttl src/java/main/org/wikipathways/covid/CheckRDF.class tests.txt
+	@echo "Detection curation events for $@ ..."
 	@mkdir -p reports
 	@java -cp libs/slf4j-simple-1.7.32.jar:libs/jena-arq-3.17.0.jar:src/java/main/:libs/wikipathways.curator-1-SNAPSHOT-jar-with-dependencies.jar org.wikipathways.covid.CheckRDF $< $@
 

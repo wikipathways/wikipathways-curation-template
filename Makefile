@@ -5,7 +5,7 @@ REPORTS := ${shell cat pathways.txt | sed -e 's/\(.*\)/reports\/\1.md/' }
 SBMLS := ${shell cat pathways.txt | sed -e 's/\(.*\)/sbml\/\1.sbml/' } ${shell cat pathways.txt | sed -e 's/\(.*\)/sbml\/\1.txt/' }
 SVGS := ${shell cat pathways.txt | sed -e 's/\(.*\)/sbml\/\1.svg/' }
 
-FRAMEWORKVERSION=release-2
+FRAMEWORKVERSION=release-3
 
 WEBSITE := ${shell cat website.txt }
 
@@ -15,7 +15,7 @@ install:
 	@wget -O libs/GPML2RDF-3.0.0-SNAPSHOT.jar https://github.com/wikipathways/wikipathways-curation-template/releases/download/${FRAMEWORKVERSION}/GPML2RDF-3.0.0-SNAPSHOT.jar
 	@wget -O libs/wikipathways.curator-1-SNAPSHOT-jar-with-dependencies.jar https://github.com/wikipathways/wikipathways-curation-template/releases/download/${FRAMEWORKVERSION}/wikipathways.curator-1-SNAPSHOT-jar-with-dependencies.jar
 	@wget -O libs/slf4j-simple-1.7.32.jar https://search.maven.org/remotecontent?filepath=org/slf4j/slf4j-simple/1.7.32/slf4j-simple-1.7.32.jar
-	@wget -O libs/jena-arq-4.2.0.jar https://repo1.maven.org/maven2/org/apache/jena/jena-arq/4.2.0/jena-arq-4.2.0.jar
+	@wget -O libs/jena-arq-4.3.0.jar https://repo1.maven.org/maven2/org/apache/jena/jena-arq/4.3.0/jena-arq-4.3.0.jar
 
 sbml: ${SBMLS}
 

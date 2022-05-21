@@ -1,4 +1,4 @@
-package org.wikipathways.covid;
+package org.wikipathways.curator;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,7 +20,7 @@ import org.wikipathways.wp2rdf.WPREST2RDF;
 
 import org.apache.jena.rdf.model.Model;
 
-public class CreateRDF {
+public class CreateGPMLRDF {
 
     public static void main(String[] args) throws Exception {
         String gpmlFile = args[0];
@@ -28,16 +28,13 @@ public class CreateRDF {
         String rev      = args[2];
         String outFile  = args[1];
 
-        DataSourceTxt.init();
         InputStream input = new FileInputStream(gpmlFile);
         Pathway pathway = PathwayReader.readPathway(input);
         input.close();
 
-        IDMapperStack stack = WPREST2RDF.maps();
-        Model model = GpmlConverter.convertWp(pathway, wpid, rev, stack, Collections.<String>emptyList());
+        Model model = GpmlConverter.convertGpml(pathway, wpid, rev, Collections.<String>emptyList());
         FileOutputStream output = new FileOutputStream(outFile);
         model.write(output, "TURTLE");
-        output.flush();
         output.close();
     }
 

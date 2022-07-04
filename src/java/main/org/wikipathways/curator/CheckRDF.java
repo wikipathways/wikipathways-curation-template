@@ -142,7 +142,7 @@ public class CheckRDF {
                 if (typedAssertion.getValue() == null) {
                    message += "x";
                    assertionsFailed++;
-                   errors += "            * Unexpected null found";
+                   errors += "        * Unexpected null found";
                    failedAssertions.add(assertion);
                    currentTestClassHasFails = true;
                 } else {
@@ -150,10 +150,10 @@ public class CheckRDF {
                 }
             } else if (assertion instanceof AssertTrue) {
                 AssertTrue typedAssertion = (AssertTrue)assertion;
-                if ((boolean)typedAssertion.getValue()) {
+                if (!(boolean)typedAssertion.getValue()) {
                    message += "x";
                    assertionsFailed++;
-                   errors += "            * Expected true but found false";
+                   errors += "        * Expected true but found false";
                    failedAssertions.add(assertion);
                    currentTestClassHasFails = true;
                 } else {

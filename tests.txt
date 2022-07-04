@@ -85,7 +85,7 @@ MetabolitesTests.all
 #MetabolitesTests.PubChemIDsNotNumbers
 #MetabolitesTests.PubChemSubstanceIDsNotNumbers
 MetaboliteStructureTests.all
-#MetaboliteStructureTests.nullDataSources
+#MetaboliteStructureTests.atLeastFifteenMetabolites
 #MetaboliteStructureTests.isPartOfAPathway
 #OutdatedDataSourcesTests.all
 OutdatedDataSourcesTests.outdatedUniprot

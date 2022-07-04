@@ -59,15 +59,15 @@ sbml/%.svg: sbml/%.sbml
 
 wp/Human/%.ttl: gpml/%.gpml src/java/main/org/wikipathways/curator/CreateRDF.class
 	@mkdir -p wp/Human
-	@cat "$<.rev" | xargs java -cp src/java/main/.:libs/${GPML2RDFJAR}:libs/derby-10.14.2.0.jar:libs/slf4j-simple-1.7.32.jar org.wikipathways.curator.CreateRDF $< $@
+	@cat "$<.rev" | xargs java -cp src/java/main/.:libs/${GPMLRDFJAR}:libs/derby-10.14.2.0.jar:libs/slf4j-simple-1.7.32.jar org.wikipathways.curator.CreateRDF $< $@
 
 wp/gpml/Human/%.ttl: gpml/%.gpml src/java/main/org/wikipathways/curator/CreateGPMLRDF.class
 	@mkdir -p wp/gpml/Human
-	@cat "$<.rev" | xargs java -cp src/java/main/.:libs/${GPML2RDFJAR}:libs/derby-10.14.2.0.jar:libs/slf4j-simple-1.7.32.jar org.wikipathways.curator.CreateGPMLRDF $< $@
+	@cat "$<.rev" | xargs java -cp src/java/main/.:libs/${GPMLRDFJAR}:libs/derby-10.14.2.0.jar:libs/slf4j-simple-1.7.32.jar org.wikipathways.curator.CreateGPMLRDF $< $@
 
 src/java/main/org/wikipathways/curator/CreateRDF.class: src/java/main/org/wikipathways/curator/CreateRDF.java
 	@echo "Compiling $@ ..."
-	@javac -cp libs/${GPML2RDFJAR} src/java/main/org/wikipathways/curator/CreateRDF.java
+	@javac -cp libs/${GPMLRDFJAR} src/java/main/org/wikipathways/curator/CreateRDF.java
 
 src/java/main/org/wikipathways/curator/CreateGPMLRDF.class: src/java/main/org/wikipathways/curator/CreateGPMLRDF.java
 	@echo "Compiling $@ ..."

@@ -15,7 +15,7 @@ WEBSITE := ${shell cat website.txt }
 all: wikipathways-rdf-wp.zip wikipathways-rdf-gpml.zip
 
 install:
-	@wget -O libs/${GPMLRDFJAR} https://github.com/wikipathways/wikipathways-curation-template/releases/download/${FRAMEWORKVERSION}/${GPML2RDFJAR}
+	@wget -O libs/${GPMLRDFJAR} https://github.com/wikipathways/wikipathways-curation-template/releases/download/${FRAMEWORKVERSION}/${GPMLRDFJAR}
 	@wget -O libs/${WPCURJAR} https://github.com/wikipathways/wikipathways-curation-template/releases/download/${FRAMEWORKVERSION}/${WPCURJAR}
 	@wget -O libs/slf4j-simple-1.7.32.jar https://search.maven.org/remotecontent?filepath=org/slf4j/slf4j-simple/1.7.32/slf4j-simple-1.7.32.jar
 	@wget -O libs/jena-arq-${JENAVERSION}.jar https://repo1.maven.org/maven2/org/apache/jena/jena-arq/${JENAVERSION}/jena-arq-${JENAVERSION}.jar

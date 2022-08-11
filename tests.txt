@@ -56,6 +56,7 @@ HMDBSecMetabolitesTests.all
 #HMDBSecMetabolitesTests.oldFormat
 #HMDBSecMetabolitesTests.outdatedIdentifiers
 InteractionTests.all
+#InteractionTests.incorrectKEGGIdentifiers
 #InteractionTests.interactionsWithLabels
 #InteractionTests.noGeneProteinConversions
 #InteractionTests.noMetaboliteToNonMetaboliteConversions
@@ -87,6 +88,7 @@ MetabolitesTests.all
 #MetabolitesTests.metabolitesWithAnEntrezGeneID
 #MetabolitesTests.metabolitesWithDbButNoIdentifier
 #MetabolitesTests.metabolitesWithIdentifierButNoDb
+#MetabolitesTests.tooManyInChIKeys
 #OutdatedDataSourcesTests.all
 OutdatedDataSourcesTests.discontinuedUniGene
 OutdatedDataSourcesTests.noInChIDataSourceYet
@@ -113,6 +115,7 @@ OutdatedDataSourcesTests.outdatedUniprot4
 PathwayTests.all
 #PathwayTests.deletedPathways
 #PathwayTests.linksToDeletedPathways
+#PathwayTests.linksToDeletedPathways_All
 #PathwayTests.speciesMismatch
 #PathwayTests.testRoundedRectangle
 #PathwayTests.youMustCite

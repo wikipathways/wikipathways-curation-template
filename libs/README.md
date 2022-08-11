@@ -24,7 +24,7 @@ followed by:
 
 ```
 cd WPRDF
-mvn clean install
+mvn -Dmaven.test.skip=true clean install
 ```
 
 That creates `GPML2RDF-3.0.0-SNAPSHOT.jar` which

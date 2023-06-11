@@ -5,8 +5,8 @@ REPORTS := ${shell cat pathways.txt | sed -e 's/\(.*\)/reports\/\1.md/' }
 SBMLS := ${shell cat pathways.txt | sed -e 's/\(.*\)/sbml\/\1.sbml/' } ${shell cat pathways.txt | sed -e 's/\(.*\)/sbml\/\1.txt/' }
 SVGS := ${shell cat pathways.txt | sed -e 's/\(.*\)/sbml\/\1.svg/' }
 
-FRAMEWORKVERSION=release-5
-JENAVERSION=4.6.1
+FRAMEWORKVERSION=release-6
+JENAVERSION=4.8.0
 GPMLRDFJAR=GPML2RDF-3.0.0-SNAPSHOT.jar
 WPCURJAR=wikipathways.curator-1-SNAPSHOT.jar
 
